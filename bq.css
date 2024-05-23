@@ -299,6 +299,11 @@ img{
 .popular-products-box .popular-products-btn button:hover{
     background: #f8dcdc;
 }
+
+
+
+/* Discount news*/
+
 .discount-news {
     background: linear-gradient(135deg, #bd654f, #feb47b);
     border-radius: 10px;
@@ -378,6 +383,7 @@ img{
     margin-top: 10px;
 }
 
+/* Our services*/
 
 .our-services{
     background: #fbf9f9;
@@ -394,7 +400,7 @@ img{
 .our-sevices-box .our-sevices-item{
     text-align: center;
     margin: 30px 40px;
-    width: 270px;
+    width: 250px;
     line-height: 35px;
     padding: 15px;
 }

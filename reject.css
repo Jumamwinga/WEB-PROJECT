@@ -56,3 +56,12 @@
     height: 280px;
     width:280px ;
 }
+
+
+.our-sevices-box .our-sevices-item{
+    text-align: center;
+    margin: 30px 40px;
+    width: 270px;
+    line-height: 35px;
+    padding: 15px;
+}
