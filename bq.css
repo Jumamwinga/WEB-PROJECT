@@ -27,16 +27,17 @@ img{
     padding: 0 12px;
     z-index: 1;
     position: absolute;
+}
 
 .nav-container .logo{
-    width: 80px;
+    width: 800px;
 }
 
 .nav-container .logo img{
-    border-radius: 50%;
+    border-radius: 100%;
 }
     
-}
+
 .hamburger{
     display: none;
 }
@@ -414,8 +415,11 @@ img{
     font-size: 23px;
     color: orange;
     transition: all .4s ease-in-out;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+    
+    
 }
+
 .our-sevices-box .our-sevices-item .our-services-icon:hover{
     background: orange;
     color: white;
@@ -425,94 +429,125 @@ img{
     font-size: 17px;
     font-weight: 400;
     margin-bottom: 10px;
+    
+    
 
 }
 .our-sevices-box .our-sevices-item .our-services-body label{
     font-size: 15px;
     font-weight: 300;
+    
+    
 }
 
 /* footer */
 
-.footer{
+.footer {
     padding: 80px 90px;
     background: #241816;
     margin-top: 30px;
-}
-.footer-box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #241816;
     color: white;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
-.footer-box .footer-1 h4 {
-    margin-bottom: 20px;
-    font-size: 19px;
 
-}.footer-box .footer-1 label {
-    display: inline-block;
+.footer-i {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px; /* Ensures the items don't get too narrow on small screens */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-i h4 {
+    margin-bottom: 15px;
+    font-size: 19px;
+    white-space: nowrap; /* Prevent heading from wrapping */
+    height: 25px; /* Set a fixed height for all headings */
+    display: flex; /* Enable flexbox for heading */
+    align-items: center; /* Vertically center align heading */
+}
+
+
+.footer-i p {
     margin-bottom: 5px;
-    font-size: 13px;
+    font-size: 14px;
     color: rgb(137, 130, 130);
 }
-.footer-box .footer-1 {
-    margin: 30px;
+
+/* Remove the relative positioning for f3 and f4 to align them properly */
+.footer-i.f3, .footer-i.f4 {
+    position: static;
+}
+.footer-i.f4 {
+    align-self: flex-start; /* Aligns f4 with the other footer items */
+    width: 100%;
+    margin-top: 0;
 }
 
-.footer-box .footer-1 .f3 {
-    position: relative;
-    bottom: 40px;
+.footer-i.f4 p {
+    width: auto; /* Make sure the width is appropriate for responsiveness */
 }
 
-.footer-box .footer-1 .f4 {
-    position: relative;
-    top: 32px;
-}
-
-.footer-box .footer-1 .f4 label {
-    width: 400px;
-    display: block;
-    line-height: 22px;
-}
-.footer-box .footer-1 .f4 input {
-    display: inline-block;
+.subscribe-form {
+    display: flex;
     margin-top: 20px;
-    width: 300px;
+}
+
+.subscribe-form input {
+    flex: 1;
     padding: 12px 30px;
     border: none;
     outline: none;
 }
-.footer-box .footer-1 .f4 button {
+
+.subscribe-form button {
     padding: 12px;
-    position: relative;
-    right: 8px;
     background: white;
-    outline: none;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.footer-box .footer-1 .f4 .social-media{
-    margin-top: 30px;
+
+.footer-i.f4 .social-media {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* Adds space between icons */
 }
-.footer-box .footer-1 .f4 .social-media a i{
+
+.footer-i.f4 .social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove the underline from links */
+}
+
+.footer-i.f4 .social-media a i {
     color: white;
-    margin-right: 10px;
     font-size: 19px;
     border-radius: 50%;
     transition: all .3s ease-in-out;
     padding: 13px;
 }
-.footer-box .footer-1 .f4 .social-media a i:hover{
+
+.footer-i.f4 .social-media a i:hover {
     background: white;
     color: black;
 }
 
 
+
+
+
 /*  Responsive */
 @media(max-width: 755px) {
-    .nav-bar ul li a {
+    .navbar ul li a {
         display: block;
         color: white;
         font-size: 15px;
@@ -1024,18 +1059,18 @@ img{
     }
 }
 @media(max-width: 835px){
-    .footer-box .footer-1 .f3{
+    .footer-box .footer-i .f3{
         bottom: 0;
     }
 }
 @media(max-width: 580px){
-    .footer-box .footer-1.f4{
+    .footer-box .footer-i.f4{
         margin: 20px;
     }
-    .footer-box .footer-1.f4 label{
+    .footer-box .footer-i.f4 label{
         width: 300px;
     }
-    .footer-box .footer-1.f4 input{
+    .footer-box .footer-i.f4 input{
         width: 250px;
         padding: 12px 30px;
     }
@@ -1047,36 +1082,36 @@ img{
         margin: 0;
     }
 
-    .footer-box .footer-1.f4 {
+    .footer-box .footer-i.f4 {
         margin: 10px;
     }
     
-    .footer-box .footer-1.f4 label {
+    .footer-box .footer-i.f4 label {
         display: block;
         width: 250px;
         margin: 0 auto;
     }
     
-    .footer-box .footer-1.f4 input {
+    .footer-box .footer-i.f4 input {
         width: 200px;
         padding: 10px 25px;
         margin: 10px auto;
         display: block;
     }
     
-    .footer-box .footer-1.f4 .social-media {
+    .footer-box .footer-i.f4 .social-media {
         margin-top: 20px;
         display: flex;
         justify-content: center;
     }
     
-    .footer-box .footer-1.f4 .social-media a {
+    .footer-box .footer-i.f4 .social-media a {
         margin-right: 5px;
         font-size: 17px;
         padding: 11px;
     }
     
-    .footer-box .footer-1.f4 button {
+    .footer-box .footer-i.f4 button {
         padding: 10px;
         position: relative;
         right: 10px;
