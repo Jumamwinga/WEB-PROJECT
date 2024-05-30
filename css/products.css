@@ -8,6 +8,10 @@
     list-style: none;
 
 }
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+  background: transparent;
+}
 html{
     background: #fbf9f9;
     font-family: 'poppins', sans-serif;
@@ -17,6 +21,10 @@ img{
     width: 15%;
     height: 15%;
 }
+header{
+  padding-bottom: 100px;
+}
+
 .nav-container{
     width: 100%;
     height: 110px;
@@ -27,16 +35,17 @@ img{
     padding: 0 12px;
     z-index: 1;
     position: absolute;
+}
 
 .nav-container .logo{
-    width: 80px;
+    width: 800px;
 }
 
 .nav-container .logo img{
-    border-radius: 50%;
+    border-radius: 100%;
 }
     
-}
+
 .hamburger{
     display: none;
 }
@@ -57,52 +66,313 @@ img{
     color: black;
     background: white;
 }
-/*=============== FOOTER ===============*/
-.footer__container {
-    row-gap: 2rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 3rem;
-  }
+
   
-  .footer__title {
-    font-size: var(--h2-font-size);
-    margin-bottom: var(--mb-1-5);
-  }
-  
-  .footer__list, 
-  .footer__links {
+  .child {
+    margin: 30px auto;
     display: flex;
-    flex-direction: column;
-    row-gap: .75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 5px;
+}
+.childprods {
+  flex-basis: 25%;
+  padding: 40px;
+  min-width: 200px;
+  margin-bottom: 25px;
+  transition: transform 0.5s;
+}
+.childprods img {
+  width: 220px;
+  height: 300px;
+  
+}
+
+.childprods p {
+  font-size: 15px;
+  text-align: left;
+}
+
+.rating .fa {
+  color: #5fa387;
+}
+
+.childprods:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+
+.belowfooter {
+  text-align: center;
+  border-top: 3px solid rgb(66, 66, 66);
+  padding-top: 2em;
+}
+.footerChild1, .footerChild2 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footerChild1 {
+  flex: 1;
+  text-align: center;
+}
+
+.footerChild1 img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.footerChild2 {
+  flex-basis: 12%;
+}
+
+.footerChild2 img {
+  width: 250px;
+}
+
+.footerChild2 p {
+  align-items: right;
+  font-size: 14px;
+}
+.page-btn {
+  margin-bottom: 35px;
+  text-align: center;
+}
+.page-btn span {
+  display: inline-block;
+  background-color: rgb(83, 134, 103);
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-btn span:hover {
+  background-color: #333;
+  border: 1px solid grey;
+}
+
+@media only screen and (max-width: 670px) {
+  .child {
+      text-align: center;
+  }
+}
+.footer {
+  padding: 80px 90px;
+  background: #241816;
+  margin-top: 30px;
+  color: white;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-i {
+  flex: 1;
+  margin: 20px;
+  min-width: 200px; /* Ensures the items don't get too narrow on small screens */
+}
+
+.footer-i h4 {
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+
+.footer-i p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: rgb(137, 130, 130);
+}
+
+/* Remove the relative positioning for f3 and f4 to align them properly */
+.footer-i.f3, .footer-i.f4 {
+  position: static;
+}
+
+.footer-i.f4 p {
+  width: 100%; /* Make sure the width is appropriate for responsiveness */
+  line-height: 22px;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 12px 30px;
+  border: none;
+  outline: none;
+}
+
+.subscribe-form button {
+  padding: 12px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-i.f4 .social-media {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px; /* Adds space between icons */
+}
+
+.footer-i.f4 .social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Remove the underline from links */
+}
+
+.footer-i.f4 .social-media a i {
+  color: white;
+  font-size: 19px;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+  padding: 13px;
+}
+
+.footer-i.f4 .social-media a i:hover {
+  background: white;
+  color: black;
+}
+
+/* Media Queries */
+@media (max-width: 835px) {
+  .footer-box .footer-i.f3 {
+      position: static;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer-box .footer-i.f4 {
+      margin: 20px;
+  }
+  .footer-box .footer-i.f4 p {
+      width: 300px;
+  }
+  .subscribe-form input {
+      width: 250px;
+      padding: 12px 30px;
+  }
+}
+
+@media (max-width: 440px) {
+  body {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+  }
+
+  .footer-box {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-i {
+      margin: 10px 0;
   }
   
-  .footer__link {
-    color: var(--text-color);
+  .footer-box .footer-i.f4 p {
+      width: 250px;
+      margin: 0 auto;
   }
   
-  .footer__link:hover {
-    color: var(--title-color);
+  .subscribe-form {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .subscribe-form input {
+      width: 200px;
+      padding: 10px 25px;
+      margin: 10px 0;
+  }
+
+  .subscribe-form button {
+      width: 50px; /* Ensure the button is aligned with the input */
+      padding: 10px;
+      margin: 10px 0;
   }
   
-  .footer__social {
-    display: flex;
-    column-gap: 1rem;
+  .footer-i.f4 .social-media {
+      justify-content: center;
   }
   
-  .footer__social-link {
-    font-size: 1.25rem;
-    color: var(--text-color);
+  .footer-i.f4 .social-media a {
+      margin: 0 5px;
   }
   
-  .footer__social-link:hover {
-    color: var(--title-color);
+  .footer-i.f4 .social-media a i {
+      font-size: 17px;
+      padding: 11px;
   }
-  
-  .footer__copy {
-    display: block;
-    margin: 3.5rem 0 1rem 0;
-    text-align: center;
-    font-size: var(--smaller-font-size);
-    color: var(--text-color-light);
+}
+
+/* Additional media queries */
+
+/* Styles for devices with a max width of 1024px */
+@media (max-width: 1024px) {
+  .nav-container .logo {
+      width: 600px;
   }
-  
+  .childprods {
+      flex-basis: 30%;
+      padding: 30px;
+  }
+}
+
+/* Styles for devices with a max width of 768px */
+@media (max-width: 768px) {
+  .nav-container .logo {
+      width: 400px;
+  }
+  .childprods {
+      flex-basis: 45%;
+      padding: 20px;
+  }
+  .navbar ul {
+      flex-direction: column;
+      align-items: center;
+  }
+  .navbar ul li a {
+      margin: 5px 0;
+  }
+  .hamburger {
+      display: block;
+  }
+  .navbar {
+      display: none;
+  }
+  .hamburger.active + .navbar {
+      display: flex;
+  }
+}
+
+/* Styles for devices with a max width of 480px */
+@media (max-width: 480px) {
+  .nav-container .logo {
+      width: 300px;
+  }
+  .childprods {
+      flex-basis: 100%;
+      padding: 10px;
+  }
+  img {
+      width: 100%;
+      height: auto;
+  }
+}
